@@ -1,0 +1,29 @@
+/* Navbar styles */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    transition: max-height 0.3s ease;
+}
+
+.navbar a {
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Hide navbar by default */
+        flex-direction: column; /* Stack links vertically */
+        background-color: white; /* Background color for dropdown */
+        position: absolute; /* Position it absolutely */
+        top: 60px; /* Position below the header */
+        width: 100%; /* Full width */
+        z-index: 1000; /* Ensure it appears above other content */
+    }
+
+    .navbar.active {
+        display: flex; /* Show navbar when active */
+    }
+}
